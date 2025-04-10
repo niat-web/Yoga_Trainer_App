@@ -1,0 +1,251 @@
+/* style.css */
+ :root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --light-text: #fff;
+  --dark-text: #333;
+  --background-light: #f4f4f4;
+  --background-dark: #222;
+  --card-background-light: #fff;
+  --card-background-dark: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+ }
+ 
+ [data-theme="dark"] {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --light-text: #eee;
+  --dark-text: #ddd;
+  --background-light: #333;
+  --background-dark: #222;
+  --card-background-light: #333;
+  --card-background-dark: #222;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+ }
+ 
+ body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--dark-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+ }
+ 
+ /* Header */
+ header {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 20px 0;
+  box-shadow: 0 2px 5px var(--shadow-color);
+ }
+ 
+ header h1 {
+  margin-bottom: 0.5rem;
+ }
+ 
+ /* Dark Mode Toggle */
+ #darkModeToggle {
+  background-color: var(--light-text);
+  color: var(--primary-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+ }
+ 
+ #darkModeToggle:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+ }
+ 
+ /* Main Content */
+ .container {
+  padding: 20px;
+ }
+ 
+ section {
+  margin-bottom: 30px;
+ }
+ 
+ h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+ }
+ 
+ /* Cards */
+ .card {
+  background-color: var(--card-background-light);
+  color: var(--dark-text);
+  border: none;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+ }
+ 
+ .card-body {
+  padding: 1.25rem;
+ }
+ 
+ .card-title {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+ }
+ 
+ .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: background-color var(--transition-speed), border-color var(--transition-speed);
+ }
+ 
+ .btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+ }
+ 
+ /* Modal */
+ .modal-content {
+  background-color: var(--card-background-light);
+  color: var(--dark-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+ }
+ 
+ .modal-header {
+  border-bottom: 1px solid var(--shadow-color);
+ }
+ 
+ .modal-footer {
+  border-top: 1px solid var(--shadow-color);
+ }
+ 
+ /* Interactive Timer */
+ #timer {
+  text-align: center;
+ }
+ 
+ #startTimer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color var(--transition-speed);
+ }
+ 
+ #startTimer:hover {
+  background-color: var(--secondary-color);
+ }
+ 
+ #timerDisplay {
+  font-size: 1.2rem;
+ }
+ 
+ /* Pose Tracker */
+ #poseList .list-group-item {
+  background-color: var(--card-background-light);
+  color: var(--dark-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+ }
+ 
+ /* Breathing Exercises */
+ #breathing-exercises .card {
+  background-color: var(--card-background-light);
+  color: var(--dark-text);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+ }
+ 
+ /* Pose Reminders */
+ /* Personalized Training Plans */
+ 
+ /* Floating Action Button */
+ #scrollToTopBtn {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition-speed);
+ }
+ 
+ #scrollToTopBtn:hover {
+  opacity: 1;
+ }
+ 
+ /* Footer */
+ footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 -2px 5px var(--shadow-color);
+ }
+ 
+ /* Form Styles (Improved) */
+ .form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+ }
+ 
+ .form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb), 0.25);
+ }
+ 
+ .form-group label {
+  font-weight: 500;
+  color: var(--dark-text);
+  margin-bottom: 0.5rem;
+  display: block;
+ }
+ 
+ /* Validation Styles (Example) */
+ .form-control.is-invalid {
+  border-color: #dc3545;
+ }
+ 
+ .invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+ }
+ 
+ /* Animations */
+ @keyframes fadeIn {
+  from {
+   opacity: 0;
+  }
+ 
+  to {
+   opacity: 1;
+  }
+ }
+ 
+ .fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+ }
+ 
+ /* Media Queries for Responsiveness */
+ @media (max-width: 768px) {
+  .col-md-4 {
+   width: 100%;
+  }
+ 
+  #scrollToTopBtn {
+   display: none !important; /* Hide on small screens */
+  }
+ }

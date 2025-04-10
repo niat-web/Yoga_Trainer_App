@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga Trainer App</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+   integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+ </head>
+ 
+ <body>
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-4 mb-4">
+   <h1>Yoga Trainer App</h1>
+   <p>Your personal guide to mindful movement</p>
+   <button id="darkModeToggle" class="btn btn-light"><i class="fas fa-moon"></i> Dark Mode</button>
+  </header>
+ 
+  <!-- Main Content -->
+  <div class="container">
+ 
+   <!-- Yoga Pose Database -->
+   <section id="pose-database" class="mb-4">
+    <h2>Yoga Pose Database</h2>
+    <div class="row">
+     <!-- Pose Card Example -->
+     <div class="col-md-4 mb-3">
+      <div class="card">
+       <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Pose Image"> -->
+       <div class="card-body">
+        <h5 class="card-title">Tadasana (Mountain Pose)</h5>
+        <p class="card-text">A foundational standing pose. Strengthens the legs and core.</p>
+        <p><strong>Difficulty:</strong> Beginner</p>
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#poseModal">View Details</a>
+       </div>
+      </div>
+     </div>
+     <!-- More Pose Cards -->
+     <div class="col-md-4 mb-3">
+      <div class="card">
+       <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Pose Image"> -->
+       <div class="card-body">
+        <h5 class="card-title">Adho Mukha Svanasana (Downward-Facing Dog)</h5>
+        <p class="card-text">A classic inversion. Stretches the hamstrings and strengthens the arms.</p>
+        <p><strong>Difficulty:</strong> Beginner</p>
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#poseModal">View Details</a>
+       </div>
+      </div>
+     </div>
+     <div class="col-md-4 mb-3">
+      <div class="card">
+       <!-- <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Pose Image"> -->
+       <div class="card-body">
+        <h5 class="card-title">Trikonasana (Triangle Pose)</h5>
+        <p class="card-text">A standing pose to improve balance and flexibility.</p>
+        <p><strong>Difficulty:</strong> Intermediate</p>
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#poseModal">View Details</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- Pose Guidance Modal -->
+   <div class="modal fade" id="poseModal" tabindex="-1" role="dialog" aria-labelledby="poseModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-header">
+       <h5 class="modal-title" id="poseModalLabel">Pose Details</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+       </button>
+      </div>
+      <div class="modal-body">
+       <img src="https://via.placeholder.com/400x300" alt="Pose Image" class="img-fluid mb-3">
+       <h4>Tadasana (Mountain Pose)</h4>
+       <p><strong>Description:</strong> A foundational standing pose. Strengthens the legs and core.</p>
+       <p><strong>Benefits:</strong> Improves posture, increases awareness.</p>
+       <p><strong>Instructions:</strong> Stand tall with feet together, engage your core, and lift your chest.</p>
+       <p><strong>Common Mistakes:</strong> Arching the back, forgetting to breathe.</p>
+       <p><strong>Posture Tips:</strong> Keep your shoulders relaxed and your gaze forward.</p>
+       <iframe width="100%" height="315" src="https://www.youtube.com/embed/Wv5OOJ0o-es"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+    </div>
+   </div>
+ 
+   <!-- Interactive Timer -->
+   <section id="timer" class="mb-4">
+    <h2>Interactive Timer</h2>
+    <div class="form-group">
+     <label for="poseDuration">Pose Duration (seconds):</label>
+     <input type="number" class="form-control" id="poseDuration" value="30">
+    </div>
+    <button id="startTimer" class="btn btn-success">Start Timer</button>
+    <p id="timerDisplay">Time Remaining: <span id="time">30</span> seconds</p>
+   </section>
+ 
+   <!-- Pose Tracker -->
+   <section id="pose-tracker" class="mb-4">
+    <h2>Pose Tracker</h2>
+    <p>Track your progress and stay motivated!</p>
+    <ul id="poseList" class="list-group">
+     <!-- Example tracked pose -->
+     <li class="list-group-item d-flex justify-content-between align-items-center">
+      Tadasana (Mountain Pose)
+      <span class="badge badge-primary badge-pill">3 times</span>
+     </li>
+    </ul>
+   </section>
+ 
+   <!-- Breathing Exercises -->
+   <section id="breathing-exercises" class="mb-4">
+    <h2>Breathing Exercises (Pranayama)</h2>
+    <p>Enhance your practice with mindful breathing.</p>
+    <div class="card">
+     <div class="card-body">
+      <h5 class="card-title">Ujjayi Breath</h5>
+      <p class="card-text">A calming breath technique. Inhale deeply through the nose, constricting the back of the throat
+       slightly.</p>
+     </div>
+    </div>
+   </section>
+ 
+   <!-- Pose Reminders -->
+   <section id="pose-reminders" class="mb-4">
+    <h2>Pose Reminders</h2>
+    <p>Set reminders to stay consistent with your practice.</p>
+    <div class="form-group">
+     <label for="reminderTime">Reminder Time:</label>
+     <input type="time" class="form-control" id="reminderTime">
+    </div>
+    <button id="setReminder" class="btn btn-info">Set Reminder</button>
+   </section>
+ 
+   <!-- Personalized Training Plans -->
+   <section id="training-plans">
+    <h2>Personalized Training Plans</h2>
+    <p>Achieve your goals with customized routines.</p>
+    <div class="form-group">
+     <label for="userGoal">Your Goal:</label>
+     <select class="form-control" id="userGoal">
+      <option>Improving Flexibility</option>
+      <option>Building Strength</option>
+      <option>Mindfulness and Relaxation</option>
+     </select>
+    </div>
+    <button id="getPlan" class="btn btn-warning">Get Training Plan</button>
+   </section>
+ 
+   <!-- Fetch API Data Joke -->
+   <section id="joke-api">
+    <h2>Fetch API Data</h2>
+    <p>Random joke from the API</p>
+    <div id="jokeContainer">
+     <button id="fetchJoke">Get a Joke</button>
+     <div id="jokeDisplay"></div>
+    </div>
+   </section>
+ 
+  </div>
+ 
+  <!-- Floating Action Button -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle" style="position: fixed; bottom: 20px; right: 20px;">
+   <i class="fas fa-arrow-up"></i>
+  </button>
+ 
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-4">
+   &copy; 2024 Yoga Trainer App | <a href="#" class="text-white">Privacy Policy</a> | <a href="#"
+    class="text-white">Terms of Service</a>
+  </footer>
+ 
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+ </body>
+ 
+ </html>
