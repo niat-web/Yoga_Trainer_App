@@ -4,7 +4,7 @@
 This project implements a basic interactive Yoga Trainer application using HTML, CSS, and JavaScript. The application includes features such as a dark mode toggle, a timer for tracking pose durations, a basic pose tracker, a scroll-to-top button, simple reminder functionality, and placeholder features for personalized training plans and a joke fetching API integration. It primarily focuses on front-end functionality and demonstrates fundamental JavaScript concepts like event handling, DOM manipulation, timers, and asynchronous API calls.
 
 ## Output
-<iframe src="https://github.com/niat-web/Yoga_Trainer_App" height="1000" width="300" title="Yoga_Trainer_App"></iframe>
+<iframe src="https://niat-web.github.io/Yoga_Trainer_App/" height="1000" width="300" title="Yoga_Trainer_App"></iframe>
 
 ## Project Requirements
 **Technologies:** HTML, CSS, JavaScript
